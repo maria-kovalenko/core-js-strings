@@ -310,8 +310,19 @@ function containsSubstring(str, substring) {
  *   countVowels('aEiOu') => 5
  *   countVowels('XYZ') => 1
  */
-function countVowels(/* str */) {
-  throw new Error('Not implemented');
+function countVowels(str) {
+  const arr = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
+  let count = 0;
+  for (let i = 0; i < str.length; i += 1) {
+    for (let j = 0; j < arr.length; j += 1) {
+      if (str[i] === arr[j]) {
+        count += 1;
+      } else {
+        countVowels(str - 1);
+      }
+    }
+  }
+  return count;
 }
 
 /**
