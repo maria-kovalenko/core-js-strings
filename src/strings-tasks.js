@@ -258,8 +258,10 @@ function endsWith(str, substr) {
  *   formatTime(0, 45) => "00:45"
  *   formatTime(0, 0) => "00:00"
  */
-function formatTime(/* minutes, seconds */) {
-  throw new Error('Not implemented');
+function formatTime(minutes, seconds) {
+  return `${minutes.toString().padStart(2, '0')}:${seconds
+    .toString()
+    .padStart(2, '0')}`;
 }
 
 /**
@@ -523,6 +525,63 @@ function extractEmails(str) {
 function encodeToRot13(/* str */) {
   throw new Error('Not implemented');
 }
+
+// let arrUpper = [
+//   'A',
+//   'B',
+//   'C',
+//   'D',
+//   'E',
+//   'F',
+//   'G',
+//   'H',
+//   'I',
+//   'J',
+//   'K',
+//   'L',
+//   'M',
+//   'N',
+//   'O',
+//   'P',
+//   'Q',
+//   'R',
+//   'S',
+//   'T',
+//   'U',
+//   'V',
+//   'W',
+//   'X',
+//   'Y',
+//   'Z',
+// ];
+// let arrLower = [
+//   'a',
+//   'b',
+//   'c',
+//   'd',
+//   'e',
+//   'f',
+//   'g',
+//   'h',
+//   'i',
+//   'j',
+//   'k',
+//   'l',
+//   'm',
+//   'n',
+//   'o',
+//   'p',
+//   'q',
+//   'r',
+//   's',
+//   't',
+//   'u',
+//   'v',
+//   'w',
+//   'x',
+//   'y',
+//   'z',
+// ];
 
 /**
  * Returns playid card id.
